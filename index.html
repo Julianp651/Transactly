@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transactly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
+<link rel="apple-touch-icon" href="apple-touch-icon.jpeg">
+
+
+<!-- SEO and Social Meta Tags -->
+<meta name="description" content="Transactly is the easiest way to take control of your finances. No spreadsheets, no stress—just smart personal finance management.">
+<meta property="og:title" content="Transactly – Personal Finance App">
+<meta property="og:description" content="Transactly is the easiest way to take control of your finances. No spreadsheets, no stress—just smart personal finance management.">
+<meta property="og:image" content="screenshot6.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://transactly.us">
+<meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      min-height: 100vh;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4em 2.5em 1.2em 2.5em;
+      background: transparent;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+    .logo-img {
+      width: 36px; height: 36px; margin-right: 9px;
+    }
+    .brand {
+      font-size: 1.32em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2em;
+      font-size: 1em;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.83;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover {
+      opacity: 1;
+    }
+    .login-btn {
+      border: 1.3px solid #0002;
+      border-radius: 12px;
+      padding: 0.45em 1.3em;
+      background: #fff;
+      font-weight: 500;
+      margin-left: 1em;
+      color: #000;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background 0.2s;
+    }
+    .login-btn:hover {
+      background: #f3f4f6;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3.3em 8vw 1.8em 8vw;
+      min-height: 72vh;
+        background: linear-gradient(120deg, #007AFF 0%, #60c2ff 100%);
+    }
+    .hero-content {
+      max-width: 480px;
+    }
+    .hero-title {
+      font-size: 2.2em;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.2em;
+      line-height: 1.1;
+    }
+    .hero-sub {
+      font-size: 1.11em;
+      color: #fff;
+      margin-bottom: 2.1em;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 1.1em;
+      margin-bottom: 1.2em;
+    }
+    .hero-btn {
+      background: #fff;
+      color: #007AFF;
+      font-weight: 700;
+      border: none;
+      box-shadow: 0 2px 10px #10182018;
+      border-radius: 8px;
+      padding: 0.93em 1.45em;
+      display: flex;
+      align-items: center;
+      gap: 0.7em;
+      font-size: 1.03em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .hero-btn:hover {
+      background: #e0e7ef;
+      color: #007AFF;
+    }
+    
+    .hero-img {
+      max-width: 200px;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #10182018;
+      background: #000;
+      padding: 0.3em;
+    }
+
+    .hero-img-container {
+      display: flex;
+      gap: 1rem;      /* adjust this value to taste */
+      align-items: flex-end;  /* so their bottoms line up nicely */
+    }
+
+    .screenshot-with-caption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .screenshot-caption {
+      margin-top: 0.5em;
+      font-size: 1.08em;
+      color: #fff;
+      font-weight: bold;    /* Make it bold */
+      text-align: center;   /* Center the text */
+      width: 100%;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-wave {
+      margin-top: -2em;
+      pointer-events: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 950px) {
+      .hero { flex-direction: column; align-items: flex-start; gap: 2.2em; }
+      .hero-img { margin: 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .navbar, .hero { padding-left: 4vw; padding-right: 4vw; }
+      .hero-title { font-size: 1.35em; }
+      .brand { font-size: 1.04em; }
+      .hero-img { max-width: 92vw; }
+    }
+    .footer {
+      text-align: center;
+      margin: 2.7em 0 0 0;
+      font-size: 0.97em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-area">
+      <img src="logo.jpeg" class="logo-img" alt="Transactly Logo" />
+      <span class="brand">TRANSACTLY</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Community</a>
+      <a href="#">Download</a>
+      <a href="#">Sign Up</a>
+      <a class="login-btn" href="#">Log In</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-title">Not a Money Genius? <br>Transactly can help!</div>
+      <div class="hero-sub">
+        Our app is simple, private, and helps you take control of your finances.<br>
+        No spreadsheets, no stress. Sign up now and start building your financial future!
+      </div>
+      <div class="hero-cta-group">
+        <a class="hero-btn" href="#"><span></span> Download</a>
+        <a class="hero-btn" href="#"><span>⬇️</span> Download</a>
+      </div>
+   
+    </div>
+<div class="hero-img-container">
+  <div class="screenshot-with-caption">
+    <img src="screenshot6.png" class="hero-img" alt="App Screenshot Light Mode" />
+    <div class="screenshot-caption">Light Mode</div>
+  </div>
+  <div class="screenshot-with-caption">
+    <img src="screenshot7.png" class="hero-img" alt="App Screenshot Dark Mode" />
+    <div class="screenshot-caption">Dark Mode</div>
+  </div>
+</div>
+
+</section>
+
+<!-- gallery section here -->
+<section style="
+  text-align:center;
+  margin:4em 0;
+  background: #f2f7ff;
+  border-radius: 24px;
+  padding: 2em 0;
+  border: 1.5px solid #007AFF10;
+">
+  <h2 style="color:#007AFF; font-size:1.35em; margin-bottom:2em;">More Screenshots</h2>
+  <div style="
+    display: flex;
+    gap: 2em;
+    overflow-x: auto;
+    padding-bottom: 1em;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  ">
+    <img src="screenshot3.png" style="max-width:200px; border-radius:18px; box-shadow:0 8px 32px #10182018; background:#000; padding:0.3em;" alt="Screenshot 1">
+    <img src="screenshot2.png" style="max-width:200px; border-radius:18px; box-shadow:0 8px 32px #10182018; background:#000; padding:0.3em;" alt="Screenshot 2">
+    <img src="screenshot1.png" style="max-width:200px; border-radius:18px; box-shadow:0 8px 32px #10182018; background:#000; padding:0.3em;" alt="Screenshot 3">
+    <img src="screenshot4.png" style="max-width:200px; border-radius:18px; box-shadow:0 8px 32px #10182018; background:#000; padding:0.3em;" alt="Screenshot 4">
+    <img src="screenshot5.png" style="max-width:200px; border-radius:18px; box-shadow:0 8px 32px #10182018; background:#000; padding:0.3em;" alt="Screenshot 5">
+  </div>
+</section>
+
+
+
+
+
+
+<div class="footer">
+  &copy; 2025 Transactly &nbsp; | &nbsp; <a href="#">Privacy Policy</a>
+</div>
+
+</body>
+</html>
