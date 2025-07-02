@@ -36,7 +36,7 @@
       overflow-x: auto;
       box-sizing: border-box;
     }
-    
+
     .navbar {
       display: flex;
       align-items: center;
@@ -183,10 +183,23 @@
       .hero { flex-direction: column; align-items: flex-start; gap: 2.2em; }
       .hero-img { margin: 0 auto; }
     }
-  @media (max-width: 600px) {
+ @media (max-width: 600px) {
   .navbar, .hero {
     padding-left: 0;
     padding-right: 0;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden; /* Prevent nav scroll on mobile */
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4em;
+    width: 100%;
   }
   .hero {
     width: 100vw;
@@ -207,6 +220,7 @@
     background: transparent;
   }
 }
+
 
     .footer {
       text-align: center;
