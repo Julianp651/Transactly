@@ -58,12 +58,15 @@
       letter-spacing: -0.02em;
       color: #000;
     }
-    .nav-links {
-      display: flex;
-      gap: 2.2em;
-      font-size: 1em;
-      align-items: center;
-    }
+   .nav-links {
+    display: flex;
+    gap: 2.2em;
+    font-size: 1em;
+    align-items: center;
+    flex-wrap: wrap;         /* <-- add this line */
+    justify-content: flex-end; /* (optional) aligns links to the right */
+}
+
     .nav-links a {
       color: #000;
       text-decoration: none;
@@ -183,43 +186,29 @@
       .hero { flex-direction: column; align-items: flex-start; gap: 2.2em; }
       .hero-img { margin: 0 auto; }
     }
- @media (max-width: 600px) {
-  .navbar, .hero {
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;         /* allow navbar content to wrap */
+    align-items: center;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
     padding-left: 0;
     padding-right: 0;
   }
-  .navbar {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100vw;
-    max-width: 100vw;
-    overflow-x: hidden; /* Prevent nav scroll on mobile */
-  }
   .nav-links {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.4em;
-    width: 100%;
+    flex-direction: row;     /* horizontal, not vertical */
+    flex-wrap: wrap;         /* allow wrapping */
+    gap: 1em;                /* maybe a smaller gap on mobile */
+    width: auto;             /* do not force 100% */
+    justify-content: flex-end;
   }
-  .hero {
-    width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-  .hero-title { font-size: 1.35em; }
-  .brand { font-size: 1.04em; }
-  .hero-img-container {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .hero-img {
-    max-width: 100vw;
-    width: 100%;
-    height: auto;
-    background: transparent;
+  .logo-area {
+    margin-bottom: 0;        /* prevents extra space */
   }
 }
+
 
 
     .footer {
